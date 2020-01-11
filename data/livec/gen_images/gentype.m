@@ -7,21 +7,18 @@ cont_level = [0.11,	0.20,	0.29,	0.38,	0.47];
 
 switch type
     case 1
-       %% gaussian blur
 
         hsize = gblur_level(level);
         h = fspecial('gaussian', hsize, hsize/6);
         temp_img = imfilter(temp_img,h,'symmetric', 'same');
         
     case 2
-       %% motion-induced blur distorted
 
         mot_angle = randi([0,360]);
         PSF = fspecial('motion',mot_level(1,level),mot_angle);
         temp_img = imfilter(temp_img, PSF, 'conv', 'symmetric', 'same');
 
     case 3
-       %% # Chromatic aberrations
         
          hsize = 3;
          R=(temp_img(:,:,1));
@@ -39,7 +36,7 @@ switch type
          temp_img=imfilter(temp_img,h,'symmetric');
          
     case 4
-        %% global contrast
+
         for chann = 1:3
             I = temp_img(:,:,chann);
             temp_img(:,:,chann) = imadjust(I,[],[cont_level(level), 1-cont_level(level)]);
