@@ -21,8 +21,9 @@ No-reference image quality assessment (NR-IQA) has received increasing attention
 
 All of training and testing operations are run in Caffe framework.
 
-# Model
+# Models
 The [VGG-16](https://gist.github.com/ksimonyan/211839e770f7b538e2d8#file-readme-md) on ImageNet model can be downloaded.
+
 In addition, our trained CNN models will be uploaded as soon as possible at Baidu and Google cloud.
 
 # License
