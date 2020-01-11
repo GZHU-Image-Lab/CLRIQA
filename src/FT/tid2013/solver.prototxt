@@ -1,0 +1,19 @@
+# The train/test net protocol buffer definition
+net: "src/FT/tid2013//train.prototxt"
+
+test_iter: 1
+
+test_interval: 40
+base_lr: 0.00001
+lr_policy: "step"
+gamma: 0.1
+stepsize: 3000
+display: 20
+max_iter: 9000
+momentum: 0.9
+solver_type: SGD
+weight_decay: 0.0005
+average_loss: 500
+snapshot: 9000
+snapshot_prefix: "models/tid2013/FT"
+solver_mode: GPU
