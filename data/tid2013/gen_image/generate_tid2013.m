@@ -20,7 +20,7 @@ function output = generate_tid2013(img, img_name)
     
     
 for type = 1:17
-   path = '/home/fuzhao/Desktop/Gen_TID2013/data4';
+   path = '/home/XXX/Desktop/Gen_TID2013/';
    path = fullfile(path, strcat('t', num2str(type)));
 for level = 0:5
     save_path = fullfile(path,num2str(level));

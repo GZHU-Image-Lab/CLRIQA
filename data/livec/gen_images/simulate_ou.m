@@ -1,10 +1,9 @@
 function output = simulate_ou(temp_img, type, level)
 
 switch type
-%% Original
     case 1
         output = temp_img;
-%% Overexposure
+
     case 2
         [m,n,k1] = size(temp_img);
         hsv = rgb2hsv(temp_img);
@@ -23,7 +22,6 @@ switch type
         end
         output = im2uint8(hsv2rgb(hsv));
 
-%% Underexposure
     case 3
               
         [m,n,k1] = size(temp_img);
@@ -42,7 +40,7 @@ switch type
             end
         end
         output = im2uint8(hsv2rgb(hsv));
-%% over and underexposure
+
  case 4
         [m,n,k1] = size(temp_img);
         hsv = rgb2hsv(temp_img);
@@ -61,8 +59,6 @@ switch type
         end
         temp_img = im2uint8(hsv2rgb(hsv));
 
-%--------------------------------------------------------             
-        [m,n,k1] = size(temp_img);
         hsv = rgb2hsv(temp_img);
         V = hsv(:,:,3);
  
