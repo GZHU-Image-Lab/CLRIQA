@@ -2,17 +2,17 @@ function output = generate_all(img, img_name)
 
 bmp_imname = strcat(img_name, '.bmp');
 jpeg_imname = strcat(img_name, '.jpg');
-jpeg_tempath = '/home/XXX/Desktop/Gen_LIVEC/Gendata12/temp/temp.jpg';
+jpeg_tempath = '/home/XXX/Desktop/Gen_LIVEC/temp/temp.jpg';
 jpeg_level = [90	84	76	67	59];
 OU_type = {'Original', 'OE', 'UE', 'OEandUE'};
 mulfile_type = {'1','2','3' ,'4', '1,2','1,3','1,4','2,3','2,4' ,'3,4', '1,2,3','1,2,4','1,3,4','2,3,4', '1,2,3,4'};
 
 for ou = 1:4
-path = '/home/XXX/Desktop/Gen_LIVEC/Gendata12';
+path = '/home/XXX/Desktop/Gen_LIVEC/';
 path = fullfile(path, OU_type{ou});
 
-for t = 5:15
-path = fullfile('/home/XXX/Desktop/Gen_LIVEC/Gendata12', OU_type{ou});
+for t = 1:15
+path = fullfile('/home/XXX/Desktop/Gen_LIVEC/', OU_type{ou});
 path = fullfile(path, strcat('t', num2str(t)));
 cho_com = randi(2);
 
