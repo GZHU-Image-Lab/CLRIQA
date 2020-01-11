@@ -3,7 +3,7 @@ import numpy as np
 import pdb
 
 class MyLossLayer(caffe.Layer):
-    """Layer of Efficient Siamese loss function."""
+    """Controllable list-wise ranking function."""
 
     def setup(self, bottom, top):
         print '*********************** SETTING UP'
