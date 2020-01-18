@@ -1,4 +1,5 @@
 clc;clear;
+
 db_path = '/home/XXX/Desktop/CSIQ/';
 file = [dir(strcat(db_path, '/*.png')) ; dir(strcat(db_path, '/*.bmp'))];
 
