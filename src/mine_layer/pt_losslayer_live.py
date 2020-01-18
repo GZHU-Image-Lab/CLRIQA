@@ -17,6 +17,8 @@ class MyLossLayer(caffe.Layer):
         dis = 4
         SepSize = batch*level
         self.dis = []
+	self.upper_loss = 0
+	self.lower_dis = []
 
         for k in range(dis):
 
@@ -27,20 +29,18 @@ class MyLossLayer(caffe.Layer):
                     self.dis.append(self.margin - (bottom[0].data[j]-bottom[0].data[i]) )
                     self.Num +=1
 
-	    
-	    upper_loss = 0
-	    upper_loss +=  np.sqrt(np.square(bottom[0].data[k*level] - bottom[1].data[k*level])) 
+	    self.upper_loss +=  np.sqrt(np.square(bottom[0].data[k*level] - bottom[1].data[k*level])) 
 	    
 	    self.lower_dis = []
 	    self.lower_dis.append(bottom[0].data[k*level+5] - 100)
 
 	self.lower_dis = np.asarray(self.lower_dis)
-	self.lower_dis = np.sum(np.maximum(0,self.lower_dis))
+	self.lower_loss = np.sum(np.maximum(0,self.lower_dis))
           
         self.dis = np.asarray(self.dis)        
         self.loss = np.maximum(0,self.dis)
 
-        top[0].data[...] = upper_loss/dis + np.sum(self.loss)/bottom[0].num + self.lower_dis/dis
+        top[0].data[...] = self.upper_loss/dis + np.sum(self.loss)/bottom[0].num + self.lower_loss/dis
 
 
 
