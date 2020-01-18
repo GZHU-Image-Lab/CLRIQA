@@ -2,6 +2,7 @@ import caffe
 import numpy as np
 import pdb
 
+
 class MyLossLayer(caffe.Layer):
     """Controllable list-wise ranking function."""
 
