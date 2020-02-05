@@ -1,7 +1,3 @@
-# Comparison
-Testing on TID2013, the pre-training results of RankIQA (PWR) and our method (CLR) are shown in following figure.
-![image](https://github.com/GZHU-Image-Lab/CLRIQA/blob/master/pic.png)
-
 # Introduction
 
 This repository contain the source code of the following technical report:
