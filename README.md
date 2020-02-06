@@ -1,3 +1,9 @@
+# Comparison with Pair-wise ranking
+
+Testing on TID2013, the pre-training result of RankIQA and CLRIQA are shown in following figure.
+![image](https://github.com/GZHU-Image-Lab/CLRIQA/blob/master/comparison.png)
+
+
 # Introduction
 
 This repository contain the source code of the following technical report:
