@@ -1,6 +1,6 @@
 # Comparison with Pair-wise ranking
 
-Testing on TID2013, the pre-training result of RankIQA (PWR) and CLRIQA (CLR) are shown in following figure.
+Training and testing on TID2013, the pre-training result of pair-wise ranking (PWR), our pair-wise ranking plus adaptive margin (PWR+AM), and our controllable list-wise ranking(CLR) are shown in following figure.
 ![image](https://github.com/GZHU-Image-Lab/CLRIQA/blob/master/comparison.png)
 
 
