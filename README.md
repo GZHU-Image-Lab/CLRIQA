@@ -1,9 +1,3 @@
-# Comparison with Pair-wise ranking
-
-Training and testing on TID2013, the pre-training result of pair-wise ranking (PWR), our pair-wise ranking plus adaptive margin (PWR+AM), and our controllable list-wise ranking(CLR) are shown in following figure.
-![image](https://github.com/GZHU-Image-Lab/CLRIQA/blob/master/comparison.png)
-
-
 # Introduction
 
 This repository contain the source code of the following technical report:
